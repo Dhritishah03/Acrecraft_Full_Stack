@@ -1,0 +1,61 @@
+.project_box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project_box img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust the height as needed */
+    object-fit: cover;
+}
+
+.project_box h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.project_box p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.project_box ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project_box ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.project_box ul li i {
+    margin-right: 5px;
+}
+
+.project_box .btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.project_box .btn:hover {
+    background-color: #0056b3;
+}
