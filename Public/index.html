@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel='stylesheet' id='camera-css' href='css/camera.css' type='text/css' media='all'>
+    <link rel="stylesheet" type="text/css" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/camera.min.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
+    <script src="js/sorting.js" type="text/javascript"></script>
+    <script src="js/jquery.isotope.js" type="text/javascript"></script>
+    <!--script type="text/javascript" src="js/jquery.nav.js"></script-->
+    <script>
+    jQuery(function() {
+        jQuery('#camera_wrap_1').camera({
+            transPeriod: 500,
+            time: 3000,
+            height: '490px',
+            thumbnails: false,
+            pagination: true,
+            playPause: false,
+            loader: false,
+            navigation: false,
+            hover: false
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!--home start-->
+    <section id="home">
+        <div class="headerLine">
+            <div id="menuF" class="default hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo col-md-4">
+                            <div>
+                                <a href="#">
+                                    <img src="images/LogoGera.png" height="100px" width="200px" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="navmenu">
+                                <ul id="menu">
+                                    <li class="active"><a href="#home"style="font-size: 18px;">Home</a></li>
+                                    <li><a href="#contact"style="font-size: 18px;">Why Hinjewadi ?</a></li>
+                                    <li><a href="#myproject"style="font-size: 18px;">Our Projects</a></li>
+                                    <!-- <li><a href="#amenities">Amenities</a></li> -->
+                                    <li class="last"><a href="#contact"style="font-size: 18px;">+91 8927007784</a></li>
+                                    <!--li><a href="#features">Features</a></li-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 hidden-xs">
+                        <div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+                            <div data-thumb="" data-src="images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h2>Discover <br/></h2>
+                                </div>
+                            </div>
+                            <div data-thumb="" data-src="images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h2>The <br/>Best</h2>
+                                </div>
+                            </div>
+                            <div data-thumb="" data-src="images/slides/blank.gif">
+                                <div class="img-responsive camera_caption fadeFromBottom">
+                                    <h2>Hinjewadi <br/> Projects.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        /* Add some basic styling for the popup */
+                        #popup {
+                          display: none;
+                          position: fixed;
+                          left: 50%;
+                          top: 50%;
+                          transform: translate(-50%, -50%);
+                          padding: 20px;
+                          background-color: #fff;
+                          border: 1px solid #ccc;
+                          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                          z-index: 1000;
+                          width: 300px;
+                          text-align: center;
+                          border-radius: 8px;
+                        }
+                    
+                        #popup h2 {
+                          margin: 0;
+                          padding-bottom: 10px;
+                          font-size: 18px;
+                        }
+                    
+                        #popup p {
+                          margin: 10px 0;
+                          font-size: 16px;
+                        }
+                    
+                        #popup button {
+                          padding: 10px 20px;
+                          background-color: #040300;
+                          color: white;
+                          border: none;
+                          border-radius: 5px;
+                          cursor: pointer;
+                          font-size: 16px;
+                        }
+                    
+                        #popup button:hover {
+                          background-color: #b3870f;
+                        }
+                    
+                        #overlay {
+                          display: none;
+                          position: fixed;
+                          left: 0;
+                          top: 0;
+                          width: 100%;
+                          height: 100%;
+                          background-color: rgba(0, 0, 0, 0.5);
+                          z-index: 500;
+                        }
+                      </style>
+                    <div class="col-md-6 col-sm-6 col-xs-12 forma">
+                        <form id="contactForm"  method="post">
+                            <input type="text" class="col-md-12 col-xs-12 name" name='name' placeholder='Name *' required/>
+                            <input type="email" class="col-md-12 col-xs-12 Email" name='email' placeholder='Email *' required />
+                            <input type="text" class="col-md-12 col-xs-12 Subject" name='subject' placeholder='Subject *' required/>
+                            <input type="text" class="col-md-12 col-xs-12 Number" name='phonenumber' placeholder='Phone Number *' required/><br>
+                            <p class="col-md-14 col-xs-12 property"></p><br>
+                                <select id="select1" class="col-md-14 col-xs-12 property" placeholder='Property' name="property">
+                                    <option value="Property" name="property" class="col-md-12 col-xs-12 property">Property</option>
+                                    <option value="Lodha Panache">Lodha Panache</option>
+                                    <option value="Farmville">Farmville</option>
+                                    <option value="Gera Highlands">Gera Highlands</option>
+                                    <option value="Central Park">Central Park</option>
+                                    <option value="Atmos">Atmos</option>
+                                    <option value="VTP">VTP</option>
+                                    <option value="Westwind">Westwind</option>
+                                    <option value="Pride">Pride</option>
+                                    <option value="Rohan">Rohan</option>
+                                </select>
+                            <p class="col-md-14 col-xs-12 property"></p><br>
+                            <textarea type="text" class="col-md-12 col-xs-12 Message" name='message' placeholder='Message *' required rows="4"></textarea>
+                            <div class="cBtn">
+                                <ul>
+                                    <!-- <li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li> -->
+                                    <li class="send" ><button type="submit" class="downloadBrochure" style="font-size: 20px"><i class="fa fa-share"></i>Download Brochure</button></li>
+                                </ul>
+                            </div>
+                        </form>
+                        <div id="overlay"></div>
+                            <div id="popup">
+                                <h2>Thank You!</h2>
+                                <p>We will contact you soon.</p>
+                                <button onclick="closePopup()">Close</button>
+                            </div>
+
+
+
+                          <script>
+                            $(document).ready(function() {
+                              $('#contactForm').on('submit', async function(event) {
+                                event.preventDefault(); // Prevent default form submission
+                        
+                                var formData = {
+                                  name: $('input[name="name"]').val(),
+                                  email: $('input[name="email"]').val(),
+                                  subject: $('input[name="subject"]').val(),
+                                  phonenumber: $('input[name="phonenumber"]').val(),
+                                  property: $('select[name="property"]').val(),
+                                  message: $('textarea[name="message"]').val()
+                                };
+                        
+                                try {
+                                  const response = await fetch('/submit', {
+                                    method: 'POST',
+                                    headers: {
+                                      'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(formData)
+                                  });
+                        
+                                  if (response.ok) {
+                                    $('#contactForm')[0].reset(); // Clear the form on successful email send
+                                    showPopup(); // Show popup on successful email send
+                                  } else {
+                                    console.error('Error submitting form.');
+                                  }
+                                } catch (error) {
+                                  console.error('Error:', error);
+                                }
+                              });
+                        
+                              document.querySelector('.downloadBrochure').addEventListener('click', async function(event) {
+                                event.preventDefault(); // Prevent default form submission
+                        
+                                const form = document.getElementById('contactForm');
+                                const formData = new FormData(form);
+                                const data = {};
+                                formData.forEach((value, key) => data[key] = value);
+                        
+                                try {
+                                  const response = await fetch('/submit', {
+                                    method: 'POST',
+                                    headers: {
+                                      'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(data)
+                                  });
+                        
+                                  if (response.ok) {
+                                    $('#contactForm')[0].reset(); // Clear the form on successful email send
+                                    showPopup(); // Show popup on successful email send
+                                  } else {
+                                    alert('There was an error submitting the form. Please try again.');
+                                  }
+                                } catch (error) {
+                                  console.error('Error:', error);
+                                  alert('There was an error submitting the form. Please try again.');
+                                }
+                              });
+                            });
+                        
+                            function showPopup() {
+                              document.getElementById('popup').style.display = 'block';
+                            }
+                        
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          </script>
+                        <!-- <script>
+                            $(document).ready(function() {
+                              $('#contactForm').on('submit', async function(event) {
+                                event.preventDefault(); // Prevent default form submission
+                        
+                                var formData = {
+                                  name: $('input[name="name"]').val(),
+                                  email: $('input[name="email"]').val(),
+                                  subject: $('input[name="subject"]').val(),
+                                  message: $('textarea[name="message"]').val()
+                                };
+                        
+                                try {
+                                  const response = await fetch('/submit', {
+                                    method: 'POST',
+                                    headers: {
+                                      'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(formData)
+                                  });
+                        
+                                  if (response.ok) {
+                                    $('#contactForm')[0].reset(); // Clear the form on successful email send
+                                  } else {
+                                    console.error('Error submitting form.');
+                                  }
+                                } catch (error) {
+                                  console.error('Error:', error);
+                                }
+                              });
+                            });
+                          </script> 
+                        
+                        
+    
+    
+                        <script>
+                            document.querySelector('.downloadBrochure').addEventListener('click', async function(event) {
+                              event.preventDefault(); // Prevent default form submission
+                        
+                              const form = document.getElementById('contactForm');
+                              const formData = new FormData(form);
+                              const data = {};
+                              formData.forEach((value, key) => data[key] = value);
+                        
+                              try {
+                                const response = await fetch('/submit', {
+                                  method: 'POST',
+                                  headers: {
+                                    'Content-Type': 'application/json'
+                                  },
+                                  body: JSON.stringify(data)
+                                });
+                        
+                                if (response.ok) {
+                                  showPopup(); // Show popup on successful email send
+                                } else {
+                                  alert('There was an error submitting the form. Please try again.');
+                                }
+                              } catch (error) {
+                                console.error('Error:', error);
+                                alert('There was an error submitting the form. Please try again.');
+                              }
+                            });
+                        
+                            function showPopup() {
+                              document.getElementById('popup').style.display = 'block';
+                            }
+                        
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          </script> -->
+                    </div>
+                    <!-- <div class="container">
+			<div class="row wrap">
+				<div class="col-md-12 gallery"> 
+						<div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+							<div data-thumb="" data-src="images/slides/blank.gif">
+								<div class="img-responsive camera_caption fadeFromBottom">
+									<h2>We listen.</h2>
+								</div>
+							</div>
+							<div data-thumb="" data-src="images/slides/blank.gif">
+								<div class="img-responsive camera_caption fadeFromBottom">
+									<h2>We discuss.</h2>
+								</div>
+							</div>
+							<div data-thumb="" data-src="images/slides/blank.gif">
+								<div class="img-responsive camera_caption fadeFromBottom">
+									<h2>We develop.</h2>
+								</div>
+							</div>
+						</div><!-- #camera_wrap_1 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4 project">
+                <h3 id="counter">0</h3>
+                <h4>Awesome Projects</h4>
+                <p>Dolor sit amet, consectetur adipiscing elit quisque tempus eget diam et lorem a laoreet phasellus ut nisi id leo molestie. </p>
+            </div>
+            <div class="col-md-4 project">
+                <h3 id="counter1">0</h3>
+                <h4>Happy Customers</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus eget diam et. laoreet phasellus ut nisi id leo. </p>
+            </div>
+            <div class="col-md-4 project">
+                <h3 id="counter2" style="margin-left: 20px;">0</h3>
+                <h4 style="margin-left: 20px;">Professional Awards</h4>
+                <p>Consectetur adipiscing elit quisque tempus eget diam et laoreet phasellus ut nisi id leo molestie adipiscing vitae a vel. </p>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="container">
+			<div class="row">
+				<div class="col-md-12 cBusiness">
+					<h3>The Best Way to Create Business Site &ndash; Attractive One Page</h3>
+					<h4>Discover elegant solution for your online business fast, reliable, affordable.</h4>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 centPic">
+					<img class="img-responsive"  src="images/bizPic.png"/>
+				</div>
+			</div>
+		</div>   
+    </div> -->
+    <!--about start-->
+    <!-- <div id="amenities">
+        <div class="line2" id="">
+            <div class="container">
+                <div class="row Fresh">
+                    <h1>AMENITIES</h1>
+                    <div class="col-md-3 col-sm-3 Des">
+                        <i class="fa fa-building"></i>
+                        <h4>CRICKINGDOM CRICKET ACADEMY</h4>
+                        <p> Discover a world of cricketing excellence at the Crickingdom Cricket Academy by Rohit Sharma.  </p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 Ver">
+                        <i class="fa fa-cog"></i>
+                        <h4>MARY KOM FOUNDATION</h4>
+                        <p> Mary Kom, the celebrated Indian boxing sensation, boasts a remarkable collection of Olympic and Commonwealth awards. </p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 Fully">
+                        <i class="fa fa-bolt"></i>
+                        <h4>TENNIS ACADEMIES</h4>
+                        <p>Led by a 12-time Grand Slam winner, Mahesh Bhupathi, our academy nurtures your child’s tennis aspiration to new heights.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 Des">
+                        <i class="fa fa-heart"></i>
+                        <h4>BADMINTON GURUKUL</h4>
+                        <p>Guided by the renowned Padma Bhushan Pullela Gopichand, Badminton Gurukul delivers exceptional Badminton coaching in close proximity to your residence.  </p>
+                    </div>
+                </div>
+                <div class="row Fresh1">
+                    <div class="col-md-3 col-sm-3 Des">
+                        <i class="fa fa-life-ring"></i>
+                        <h4> SWIMMING ACADEMY</h4>
+                        <p>Make a splash with Nisha Millet’s Swimming Academy, the celebrated Indian swimmer! </p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 Ver">
+                        <i class="fa fa-child"></i>
+                        <h4>GO-KART</h4>
+                        <p>Buckle up for an awe-inspiring revelation as Gera presents Pune’s first-ever, go-kart racing experience within a residential premises equipped with best-in-class electric go-karts.  </p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 Fully">
+                        <i class="fa fa-shield"></i>
+                        <h4>24X7 SECURITY</h4>
+                        <p> </p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 Des">
+                        <i class="fa fa-leaf"></i>
+                        <h4>LANDSCAPED GARDEN</h4>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="container">
+			<div class="row">
+				<div class="col-md-12 wwa">
+					<span name="about" ></span>
+					<h3>Who We Are? Meet Our Team!</h3>
+					<h4>We listen, we discuss, we advise and develop. We love to learn and use the latest technologies.</h4>
+				</div>
+			</div>
+		</div> -->
+        <!-- <div class="container">
+			<div class="row team">
+				<div class="col-md-4 b1">
+						<img class="img-responsive" src="images/picTeam/picT1.png">
+						<h4>Tom Simpson</h4>
+						<h5>CEO</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <br/>quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+				</div>
+				<div class="col-md-4">
+						<img class="img-responsive" src="images/picTeam/picT2.png">
+						<h4>John Doe</h4>
+						<h5>Project Manager</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+				</div>
+				<div class="col-md-4 b3">
+						<img class="img-responsive" src="images/picTeam/picT3.png">
+						<h4>Anna White</h4>
+						<h5>Developer</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br/> quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget.</p>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+						</ul>
+				</div>
+			</div>
+		</div> -->
+        <div class="container" id="myproject">
+            <div class="row">
+                <div class="col-md-12 hr1">
+                    <h1>WHY HINJEWADI?</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 bar">
+                    <div class="progB chart" data-percent="100" data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="100">
+                                <span class="percent">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>Thriving Tech Ecosystem</h3>
+                        <p>Home to major IT parks 
+                            <br/>and multinational corporations. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 bar">
+                    <div class="progB chart" data-percent="100" data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="100">
+                                <span class="percent">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>Vibrant Lifestyle</h3>
+                        <p>Gives you the perfect blend
+                            <br/>of work life balance. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 bar">
+                    <div class="progB chart" data-percent="100" data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="100">
+                                <span class="percent">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>Excellent Connectivity</h3>
+                        <p>Seamless access to Pune city
+                            <br/>and major highways. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 bar">
+                    <div class="progB chart" data-percent="100" data-animate="3500">
+                        <div class="chart chart-content">
+                            <div class="percentage" data-percent="100">
+                                <span class="percent">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textP">
+                        <h3>Future Growth</h3>
+                        <p>Continuous development promises 
+                            <br/>great appreciation in property values. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container">
+			<div class="row aboutUs">
+				<div class="col-md-12 ">
+					<h3>What Our Customers Say About Us?</h3>
+				</div>
+			</div>
+		</div>
+		<div style="position: relative;">
+			<div class="container">
+				<div class="row about">
+					<div class="col-md-6">
+						<div class="about1">
+						<img class="pic1Ab" src="images/picAbout/aboutP1.png">
+							<h3>Anna Smith, Company Inc.</h3>
+							<p>Nulla consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis. aliquam, nulla nisi lobortis elit ac.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="about2">
+						<img class="pic2Ab" src="images/picAbout/aboutP2.png">
+							<h3>John Doe, Company Inc.</h3>
+							<p>Consectetur ornare nibh, a auctor mauris scelerisque eu proin nec urna quis justo, adipiscing auctor, ut auctor feugiat fermentum nec quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, ac luctus.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="horL"></div>
+			<div class="container">
+				<div class="row about">
+					<div class="col-md-6">
+						<div class="about1">
+						<img class="pic1Ab" src="images/picAbout/aboutP3.png">
+							<h3>Tom Sawyer, Company Inc.</h3>
+							<p>A auctor mauris scelerisque eu proin nec urna quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra, felis et venenatis aliquam, nulla nisi lobortis elit, acnterdum ante feugiat vitae.</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="about2">
+						<img class="pic2Ab" src="images/picAbout/aboutP4.png">
+							<h3>Sarah White, Company Inc.</h3>
+							<p>Ornare nibh a auctor, mauris scelerisque eu proin nec urna nec a quis justo adipiscing auctor ut auctor feugiat fermentum quisque eget pharetra felis et venenatis aliquam, nulla nisi lobortis elit, ac eleifend nisl ante nec lorem. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div> -->
+        <!--project start-->
+        <div>
+            <div class="line3">
+                <div class="container">
+                    <div id="project1"></div>
+                    <div class="row Ama">
+                        <div class="col-md-12">
+                            <span name="projects" id="projectss"></span>
+                            <h3>Our Projects</h3>
+                            <p>Right here we've got something you gonna love</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- filter_block -->
+                    <div id="options" class="col-md-12" style="text-align: center;">
+                        <ul id="filter" class="option-set" data-option-key="filter">
+                            <li><a class="selected" href="#filter" data-option-value="*" class="current">All Projects</a></li>
+                            <!-- <li><a href="#filter" data-option-value=".2bhk">2BHK</a></li>
+                            <li><a href="#filter" data-option-value=".3bhk">3BHK</a></li> -->
+                            <li><a href="#filter" data-option-value=".4bhk">4BHK</a></li>
+                            <li><a href="#filter" data-option-value=".duplex">Duplex</a></li>
+                        </ul>
+                    </div>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Responsive Portfolio</title>
+                            <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+                            <style>
+                                .portfolio_block {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 15px;
+                                    justify-content: center;
+                                }
+                        
+                                .element {
+                                    flex: 0 1 calc(33.333% - 15px);
+                                    box-sizing: border-box;
+                                }
+                        
+                                .project_box {
+                                    border: 1px solid #ddd;
+                                    padding: 15px;
+                                    margin-bottom: 20px;
+                                    background-color: #fff;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                    text-align: center;
+                                }
+                        
+                                .project_box img {
+                                    width: 100%;
+                                    height: auto;
+                                    max-height: 200px; /* Adjust the height as needed */
+                                    object-fit: cover;
+                                }
+                        
+                                .project_box h3 {
+                                    margin-top: 10px;
+                                    font-size: 1.2em;
+                                }
+                        
+                                .project_box p {
+                                    margin: 10px 0;
+                                    font-size: 1em;
+                                }
+                        
+                                .project_box ul {
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 10px 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 15px;
+                                }
+                        
+                                .project_box ul li {
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 1em;
+                                }
+                        
+                                .project_box ul li i {
+                                    margin-right: 5px;
+                                }
+                        
+                                .project_box .btn {
+                                    margin-top: 10px;
+                                    background-color: #D6A841;
+                                    color: #fff;
+                                    border: none;
+                                    padding: 10px 15px;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 1em;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                }
+                        
+                                .project_box .btn:hover {
+                                    background-color: #D6A841;
+                                }
+                        
+                                @media (max-width: 768px) {
+                                    .element {
+                                        flex: 0 1 calc(50% - 15px);
+                                    }
+                                }
+                        
+                                @media (max-width: 576px) {
+                                    .element {
+                                        flex: 0 1 100%;
+                                    }
+                                }
+                                .project_box {
+                                    margin-bottom: 20px;
+                                }
+                                .clearfix {
+                                    clear: both;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                        
+                            <div class="portfolio_block columns3 pretty" data-animated="fadeIn">
+                                <div class="element col-sm-4 gall 3bhk 2bhk 4bhk">
+                                    <div class="project_box">
+                                        <a class="plS" href="images/prettyPhotoImages/lodha.jpeg" rel="prettyPhoto[gallery2]">
+                                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/lodha.jpeg" alt="pic1 Gallery" />
+                                        </a>
+                                        <div class="view project_descr">
+                                            <h3><a href="#" style="font-size: 20px; font-weight: bold;">Lodha Panache</a></h3>
+                                            <p style="font-size: 18px; font-weight: bold;">2 BHK, 3 BHK, 4 BHK</p>
+                                            <ul>
+                                                <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>96 Lacs Onwards**</li>
+                                                <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
+                                            </ul>
+                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element col-sm-4 gall 2bhk 3bhk">
+                                    <div class="project_box">
+                                        <a class="plS" href="images/prettyPhotoImages/farmville.jpeg" rel="prettyPhoto[gallery2]">
+                                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/farmville.jpeg" alt="pic2 Gallery" />
+                                        </a>
+                                        <div class="view project_descr center">
+                                            <h3><a href="#" style="font-size: 20px; font-weight: bold;">Kohinoor Famville</a></h3>
+                                            <p style="font-size: 18px; font-weight: bold;">2 BHK, 3 BHK</p>
+                                            <ul>
+                                                <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>72 Lacs Onwards**</li>
+                                                <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 2</a></li>
+                                            </ul>
+                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element col-sm-4 gall 2bhk 3bhk 4bhk duplex">
+                                    <div class="project_box">
+                                        <a class="plS" href="images/prettyPhotoImages/gerahighlands.jpeg" rel="prettyPhoto[gallery2]">
+                                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/gerahighlands.jpeg" alt="pic3 Gallery" />
+                                        </a>
+                                        <div class="view project_descr">
+                                            <h3><a href="#" style="font-size: 20px; font-weight: bold;">Gera Highlands</a></h3>
+                                            <p style="font-size: 18px; font-weight: bold;">2BHK, 3BHK, 4BHK, Duplex</p>
+                                            <ul>
+                                                <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>80 Lacs Onwards**</li>
+                                                <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 3</a></li>
+                                            </ul>
+                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="clearfix visible-sm-block"></div>
+                        
+                                <div class="element col-sm-4 gall 3bhk 2bhk duplex">
+                                    <div class="project_box">
+                                        <a class="plS" href="images/prettyPhotoImages/centralpark.jpeg" rel="prettyPhoto[gallery2]">
+                                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/centralpark.jpeg" alt="pic1 Gallery" />
+                                        </a>
+                                        <div class="view project_descr">
+                                            <h3><a href="#" style="font-size: 20px; font-weight: bold;">Hinjewadi Central Park</a></h3>
+                                            <p style="font-size: 18px; font-weight: bold;">2 BHK, 3 BHK, Duplex</p>
+                                            <ul>
+                                                <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>69 Lacs Onwards**</li>
+                                                <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 2</a></li>
+                                            </ul>
+                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element col-sm-4 gall">
+                                    <div class="project_box">
+                                        <a class="plS" href="images/prettyPhotoImages/atmos.jpg" rel="prettyPhoto[gallery2]">
+                                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/atmos.jpg" alt="pic1 Gallery" />
+                                        </a>
+                                        <div class="view project_descr center">
+                                            <h3><a href="#" style="font-size: 20px; font-weight: bold;">Life Republic Atmos</a></h3>
+                                            <p style="font-size: 18px; font-weight: bold;">2BHK ,3BHK</p>
+                                            <ul>
+                                                <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>66 Lacs Onwards**</li>
+                                                <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Marunje, Pune</a></li>
+                                            </ul>
+                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="element col-sm-4 gall 3bhk 2bhk duplex 4bhk">
+                                    <div class="project_box">
+                                        <a class="plS" href="images/prettyPhotoImages/vtp.jpeg" rel="prettyPhoto[gallery2]">
+                                            <img class="img-responsive picsGall" src="images/prettyPhotoImages/vtp.jpeg" alt="pic1 Gallery" />
+                                        </a>
+                                        <div class="view project_descr">
+                                            <h3><a href="#" style="font-size: 20px; font-weight: bold;">VTP Bellissimo</a></h3>
+                                            <p style="font-size: 18px; font-weight: bold;">2 BHK, 3BHK, 4BHK, DUPLEX</p>
+                                            <ul>
+                                                <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>75 Lacs Onwards**</li>
+                                                <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
+                                            </ul>
+                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add clearfix after every third project to clear floats -->
+        <div class="clearfix visible-sm-block"></div>
+
+                        <div class="element col-sm-4 gall 3bhk 2bhk duplex 4bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/vtp.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/vtp.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">VTP Elevate</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2 BHK, 3BHK, 4BHK, DUPLEX</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>68 Lacs Onwards**</li>
+                                        <li ><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
+                                    </ul>
+                                    <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element col-sm-4 gall 2bhk 3bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/westwind.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/westwind.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#" style="font-size: 20px; font-weight: bold;">West Wind</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2BHK, 3 BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>75 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Maan, Pune</a></li>
+                                    </ul>
+                                    <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element col-sm-4 gall 2bhk 3bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/pride.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/pride.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#" style="font-size: 20px; font-weight: bold;">Pride Purple Park District</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2BHK, 3BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>75 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi, Pune</a></li>
+                                    </ul>
+                                    <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                <!-- Add clearfix after every third project to clear floats -->
+        <div class="clearfix visible-sm-block"></div>
+
+                        <div class="element col-sm-4 gall 2bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/rohan.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/rohan.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">Rohan Nidita</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2 BHK, 3BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>84 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
+                                    </ul>
+                                    <a class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element col-sm-4 gall 2bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/rohan.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/rohan.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">Parth KIONA</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2 BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>78 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
+                                    </ul>
+                                    <a class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element col-sm-4 gall 2bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/rohan.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/rohan.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">Godrej The Gale</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">1 BHK, 2 BHK, 3BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>67 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi Mahalunge Link Road</a></li>
+                                    </ul>
+                                    <a class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                                        <!-- Add clearfix after every third project to clear floats -->
+        <div class="clearfix visible-sm-block"></div>
+
+                        <div class="element col-sm-4 gall 2bhk 4bhk duplex">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/rohan.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/rohan.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">Hinjewadi New Launch</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2 BHK, 3BHK, 4BHK, DUPLEX</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>69 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi Mahalunge Link Road</a></li>
+                                    </ul>
+                                    <a class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element col-sm-4 gall 2bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/rohan.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/rohan.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">Global Inspira</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2 BHK, 3BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>67 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 2</a></li>
+                                    </ul>
+                                    <a class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="element col-sm-4 gall 2bhk 4bhk">
+                            <div class="project_box">
+                                <a class="plS" href="images/prettyPhotoImages/rohan.jpeg" rel="prettyPhoto[gallery2]">
+                                    <img class="img-responsive picsGall" src="images/prettyPhotoImages/rohan.jpeg" alt="pic1 Gallery" />
+                                </a>
+                                <div class="view project_descr">
+                                    <h3><a href="#"style="font-size: 20px; font-weight: bold;">Shapoorji Pallonji Sensorium</a></h3>
+                                    <p style="font-size: 18px; font-weight: bold;">2 BHK, 3BHK, 4BHK</p>
+                                    <ul>
+                                        <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>85 Lacs Onwards**</li>
+                                        <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Maan, Pune</a></li>
+                                    </ul>
+                                    <a class="btn btn-primary">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+                    
+                    
+                    <!-- <div class="col-md-12 cBtn  lb" style="text-align: center;">
+						<ul class="load_more_cont ">
+							<li class="dowbload btn_load_more">
+								<a href="javascript:void(0);" >
+									<i class="fa fa-arrow-down"></i>Load More Projects
+								</a>
+							</li>
+							<li class="buy">
+								<a href="#">
+									<i class="fa fa-shopping-cart"></i>Buy on Themeforest
+								</a>
+							</li>
+						</ul>
+					</div> -->
+                </div>
+                <script type="text/javascript">
+                jQuery(window).load(function() {
+                    items_set = [{
+                        category: '3bhk',
+                        lika_count: '77',
+                        view_count: '234',
+                        src: 'images/prettyPhotoImages/pic9.jpg',
+                        title: 'Foil Mini Badges',
+                        content: ''
+                    }, {
+                        category: '2bhk',
+                        lika_count: '45',
+                        view_count: '100',
+                        src: 'images/prettyPhotoImages/pic7.jpg',
+                        title: 'Darko – Business Card Mock Up',
+                        content: ''
+                    }, {
+                        category: 'duplex',
+                        lika_count: '22',
+                        view_count: '140',
+                        src: 'images/prettyPhotoImages/pic8.jpg',
+                        title: 'Woody Poster Text Effect',
+                        content: ''
+                    }];
+                    jQuery('.portfolio_block').portfolio_addon({
+                        type: 1, // 2-4 columns simple portfolio
+                        load_count: 3,
+                        items: items_set
+                    });
+                    $('#container').isotope({
+                        animationOptions: {
+                            duration: 900,
+                            queue: false
+                        }
+                    });
+                });
+                </script>
+            </div>
+        </div>
+        <!--news start-->
+        <!-- <div id="news">
+    	<div class="line4">		
+			<div class="container">
+				<div class="row Ama">
+					<div class="col-md-12">
+					<h3>What&rsquo;s New?</h3>
+					<p>Get the latest news from our blog</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+				<div class="row news">
+					<div class="col-md-6  text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news1.jpg"/>
+					<h3><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news2.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row news2 news">
+					<div class="col-md-6 text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news3.jpg"/>
+					<h3><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news4.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row news2 news">
+					<div class="col-md-6 text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news5.jpg"/>
+					<h3 ><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news6.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container hideObj2" style="display:none;">
+				<div class="row news2 news">
+					<div class="col-md-6 text-right">
+					<img class="img-responsive picsGall" src="images/picNews/news6.jpg"/>
+					<h3><a href="#">Nam in Nisl id Ipsum Feugiat Posuere ut sit Amet Sem</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+					<div class="col-md-6 text-left">
+					<img class="img-responsive picsGall" src="images/picNews/news5.jpg"/>
+					<h3 ><a href="#">Lorem Ipsum Dolor sit Amet Pelenntesque Sodales!</a></h3>
+					<ul>
+						<li><i class="fa fa-calendar"></i>April 25, 2014</li>
+						<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>
+						<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>
+					</ul>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. adipiscing vitae vel quam proin eget mauris eget. <a class="readMore" href="#">Read More <i class="fa fa-angle-right"></i></a></p>
+					<hr class="hrNews">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+			<div class="row cBtn">
+				<div class="col-md-12" style="text-align: center; margin-bottom: -90px; z-index: 10;">
+					<ul class="mNews">
+						<li class="dowbload bhide2"><a href="#"><i class="fa fa-arrow-down"></i>Load More news</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </div> -->
+        <!--contact start-->
+        <div>
+            <div class="line5">
+                <div class="container text-center">
+                    <div class="row Ama">
+                        <div class="col-md-12 color-1">
+                            <h3>Got a Question? We&rsquo;re Here to Help!</h3>
+                            <a class="btn btn-info" href="#home">Get in touch with us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div class="container">
+                    <div class="row ab">
+                        <!-- <div class="col-md-9 col-xs-12 forma">
+					<form>
+						<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>
+						<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>
+						<input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Subject'/>
+						<textarea type="text" class="col-md-12 col-xs-12 Message" name='Message' placeholder='Message *'></textarea>
+						<div class="cBtn col-xs-12">
+							<ul>
+								<li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>
+								<li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>
+							</ul>
+						</div>
+					</form>
+				</div> -->
+                        <!-- <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h3>ABOUT</h3>
+                            <p>Hinjewadi, Pune’s bustling IT hub, is not just a place to work—it's a place to live, grow, and thrive. At Hinjewadi Living, we bring you a curated selection of the finest residential projects in the area. Experience unparalleled luxury, convenience, and community in the heart of one of India’s most dynamic locales.</p>
+                            <p>Gera Developments has stood firm for 50+ years on a foundation of core 
+                                values of trust, customer first, quality and innovation that define its identity.
+                                 Trust is paramount, fostering enduring relationships and reliability. 
+                                A relentless 'Customer First' approach guides every endeavour, ensuring 
+                                satisfaction and loyalty.
+                                 Innovation is woven into the company's DNA, consistently delivering fresh 
+                                and exceptional experiences.
+                                 Quality is non-negotiable, a benchmark for excellence.</p>
+                        </div>
+                        <div class="col-md-4 col-md-offset-2 col-sm-offset-2 col-sm-6 col-xs-12 cont">
+                            <h3>CONTACT</h3>
+                            <ul>
+                                <li><i class="fa fa-home"></i>5512 Lorem Ipsum Vestibulum 666/13</li>
+                                <li><i class="fa fa-phone"></i>+1 800 789 50 12, +1 800 450 6935</li>
+                                <li><a href="#"><i class="fa fa-envelope"></i>mail@compname.com</li></a>
+                                    <li><i class="fa fa-skype"></i>compname</li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i>Twitter</li></a>
+                                        <li><a href="#"><i class="fa fa-facebook-square"></i>Facebook</li></a>
+                                            <li><a href="#"><i class="fa fa-dribbble"></i>Dribbble</li></a>
+                                                <li><a href="#"><i class="fa fa-flickr"></i>Flickr</li></a>
+                                                    <li><a href="#"><i class="fa fa-youtube-play"></i>YouTube</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </li> -->
+                <div class="line6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15125.945776837903!2d73.70057509845827!3d18.597177820177915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bba5670fe87d%3A0xee2d60fb376a874a!2sHinjawadi%20Phase%20II%2C%20Hinjawadi%20Rajiv%20Gandhi%20Infotech%20Park%2C%20Hinjawadi%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1721469317821!5m2!1sen!2sin" width="100%" height="750" frameborder="0" style="border:0"></iframe>
+                </div>
+                <!-- <div class="container">
+			<div class="row ftext">
+				<div class="col-md-12">
+				<a id="features"></a>
+				<h3>We Care About Our Clients and Can Make Their Life Easier!</h3>
+				<p>The main peculiarity of template is the striking presentation when visitors just need to use the scrolling option to find all necessary information about your web project. </p>
+				</div>
+				<div class="cBtn">
+					<ul style="margin-top: 23px; margin-bottom: 0px; padding-left: 26px;">
+						<li class="dowbload"><a href="#"><i class="fa fa-star"></i>View All Features</a></li>
+						<li class="buy"><a href="#"><i class="fa fa-download"></i>Buy This Template</a></li>
+					</ul>
+			</div>
+			</div>
+		</div> -->
+                <div class="line7">
+                    <div class="container">
+                        <div class="row footer">
+                            <div class="col-md-12">
+                                <h3>SCHEDULE A CALL!</h3>
+                                <p>Schedule a call and get to know everything about your next best choice!</p>
+                                <div class="fr">
+                                    <div style="display: inline-block;">
+                                        
+                                        <a href="#home" class="subS">Fill The Form</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="soc col-md-12">
+                                <ul>
+                                    <li class="soc1">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc2">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc3">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc4">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc5">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc6">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc7">
+                                        <a href="#"></a>
+                                    </li>
+                                    <li class="soc8">
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lineBlack">
+                    <div class="container">
+                        <div class="row downLine">
+                            <div class="col-md-12 text-right">
+                                <!--input  id="searchPattern" type="search" name="pattern" value="Search the Site" onblur="if(this.value=='') {this.value='Search the Site'; }" onfocus="if(this.value =='Search the Site' ) this.value='';this.style.fontStyle='normal';" style="font-style: normal;"/-->
+                                <!-- <input  id="searchPattern" type="search" placeholder="Search the Site"/><i class="glyphicon glyphicon-search" style="font-size: 13px; color:#a5a5a5;" id="iS"></i>
+					</div> -->
+                                <!-- <div class="col-md-12 text-left copy text-center">
+                                    <p>Copyright &copy; 3mdigital. All Rights Reserved.</p>
+                                </div> -->
+                                <!-- <div class="col-md-6 text-right dm">
+						<ul id="downMenu">
+							<li class="active"><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#project1">Projects</a></li>
+							<li><a href="#news">News</a></li>
+							<li class="last"><a href="#contact">Contact</a></li>
+							<li><a href="#features">Features</a></li>
+						</ul>
+					</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/jquery.slicknav.js"></script>
+                <script>
+                $(document).ready(function() {
+                    $(".bhide").click(function() {
+                        $(".hideObj").slideDown();
+                        $(this).hide(); //.attr()
+                        return false;
+                    });
+                    $(".bhide2").click(function() {
+                        $(".container.hideObj2").slideDown();
+                        $(this).hide(); // .attr()
+                        return false;
+                    });
+                    $('.heart').mouseover(function() {
+                        $(this).find('i').removeClass('fa-heart-o').addClass('fa-heart');
+                    }).mouseout(function() {
+                        $(this).find('i').removeClass('fa-heart').addClass('fa-heart-o');
+                    });
+
+                    function sdf_FTS(_number, _decimal, _separator) {
+                        var decimal = (typeof(_decimal) != 'undefined') ? _decimal : 2;
+                        var separator = (typeof(_separator) != 'undefined') ? _separator : '';
+                        var r = parseFloat(_number)
+                        var exp10 = Math.pow(10, decimal);
+                        r = Math.round(r * exp10) / exp10;
+                        rr = Number(r).toFixed(decimal).toString().split('.');
+                        b = rr[0].replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1" + separator);
+                        r = (rr[1] ? b + '.' + rr[1] : b);
+                        return r;
+                    }
+                    setTimeout(function() {
+                        $('#counter').text('0');
+                        $('#counter1').text('0');
+                        $('#counter2').text('0');
+                        setInterval(function() {
+                            var curval = parseInt($('#counter').text());
+                            var curval1 = parseInt($('#counter1').text().replace(' ', ''));
+                            var curval2 = parseInt($('#counter2').text());
+                            if (curval <= 707) {
+                                $('#counter').text(curval + 1);
+                            }
+                            if (curval1 <= 12280) {
+                                $('#counter1').text(sdf_FTS((curval1 + 20), 0, ' '));
+                            }
+                            if (curval2 <= 245) {
+                                $('#counter2').text(curval2 + 1);
+                            }
+                        }, 2);
+                    }, 500);
+                });
+                </script>
+                <script type="text/javascript">
+                jQuery(document).ready(function() {
+                    jQuery('#menu').slicknav();
+                });
+                </script>
+                <script type="text/javascript">
+                $(document).ready(function() {
+                    var $menu = $("#menuF");
+                    $(window).scroll(function() {
+                        if ($(this).scrollTop() > 100 && $menu.hasClass("default")) {
+                            $menu.fadeOut('fast', function() {
+                                $(this).removeClass("default")
+                                    .addClass("fixed transbg")
+                                    .fadeIn('fast');
+                            });
+                        } else if ($(this).scrollTop() <= 100 && $menu.hasClass("fixed")) {
+                            $menu.fadeOut('fast', function() {
+                                $(this).removeClass("fixed transbg")
+                                    .addClass("default")
+                                    .fadeIn('fast');
+                            });
+                        }
+                    });
+                });
+                //jQuery
+                </script>
+                <script>
+                /*menu*/
+                function calculateScroll() {
+                    var contentTop = [];
+                    var contentBottom = [];
+                    var winTop = $(window).scrollTop();
+                    var rangeTop = 200;
+                    var rangeBottom = 500;
+                    $('.navmenu').find('a').each(function() {
+                        contentTop.push($($(this).attr('href')).offset().top);
+                        contentBottom.push($($(this).attr('href')).offset().top + $($(this).attr('href')).height());
+                    })
+                    $.each(contentTop, function(i) {
+                        if (winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom) {
+                            $('.navmenu li')
+                                .removeClass('active')
+                                .eq(i).addClass('active');
+                        }
+                    })
+                };
+                $(document).ready(function() {
+                    calculateScroll();
+                    $(window).scroll(function(event) {
+                        calculateScroll();
+                    });
+                    $('.navmenu ul li a').click(function() {
+                        $('html, body').animate({
+                            scrollTop: $(this.hash).offset().top - 80
+                        }, 800);
+                        return false;
+                    });
+                });
+                </script>
+                <script type="text/javascript" charset="utf-8">
+                jQuery(document).ready(function() {
+                    jQuery(".pretty a[rel^='prettyPhoto']").prettyPhoto({
+                        animation_speed: 'normal',
+                        theme: 'light_square',
+                        slideshow: 3000,
+                        autoplay_slideshow: true,
+                        social_tools: ''
+                    });
+                });
+                </script>
+</body>
+
+</html>
