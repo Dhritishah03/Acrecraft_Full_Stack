@@ -1731,7 +1731,7 @@ background: url(../images/bgFooter.png) no-repeat;
     font-weight: 400;
     color: #fff;
     text-align: center;
-    margin-bottom: 17px;
+    /* margin-bottom: 17px; */
 }
 .footer p {
     font-size:16px;
@@ -1759,25 +1759,30 @@ background: url(../images/bgFooter.png) no-repeat;
     float:left;
 }
 .footer .subS {
+    width: 350px;
     text-transform:uppercase;
     font-size: 13px;
     font-family: 'Roboto',
     'sans-serif';
     font-weight: 700;
-    float: left;
+    /* float: left; */
     color: #fff;
-    border-radius: 0 4px 4px 0;
+    border-radius: 4px 4px 4px 4px;
     text-decoration: none;
     box-shadow: 0px 2px 0px 0px #D6A841;
     background: #D6A842;
     padding: 10px;
     padding-right: 20px;
     padding-left: 20px;
+    margin:auto;
+    align-items: center;
+    
 }
 .fr {
     margin-top: 40px;
     text-align: center;
-    margin: 40px 0 0 357px;
+    margin: auto;
+    align-items: center;
 }
 .footer a:hover {
     background:#2f2f2f;
