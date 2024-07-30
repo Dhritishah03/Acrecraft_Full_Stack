@@ -36,6 +36,46 @@
         });
     });
     </script>
+
+<script>
+       async function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                subject: event.target.subject.value,
+                phonenumber: event.target.phonenumber.value,
+                property: event.target.property.value,
+                message: event.target.message.value
+            };
+
+            try {
+                const response = await fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    event.target.reset(); // Clear the form on successful email send
+                    alert('Form submitted successfully!');
+                } else {
+                    console.error('Error submitting form.');
+                    alert('There was an error submitting the form. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            }
+        }
+
+        function closePopups() {
+            // Add your code to close the popup here
+        }
+        </script>
 </head>
 
 <body>
@@ -739,7 +779,7 @@
                                                 <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>96 Lacs Onwards**</li>
                                                 <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
                                             </ul>
-                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                            <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                         </div>
                                     </div>
                                 </div>
@@ -755,7 +795,7 @@
                                                 <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>72 Lacs Onwards**</li>
                                                 <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 2</a></li>
                                             </ul>
-                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                            <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                         </div>
                                     </div>
                                 </div>
@@ -771,7 +811,7 @@
                                                 <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>80 Lacs Onwards**</li>
                                                 <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 3</a></li>
                                             </ul>
-                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                            <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                         </div>
                                     </div>
                                 </div>
@@ -790,7 +830,7 @@
                                                 <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>69 Lacs Onwards**</li>
                                                 <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 2</a></li>
                                             </ul>
-                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                            <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                         </div>
                                     </div>
                                 </div>
@@ -806,7 +846,7 @@
                                                 <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>66 Lacs Onwards**</li>
                                                 <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Marunje, Pune</a></li>
                                             </ul>
-                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                            <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                         </div>
                                     </div>
                                 </div>
@@ -822,7 +862,7 @@
                                                 <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>75 Lacs Onwards**</li>
                                                 <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
                                             </ul>
-                                            <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                            <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                         </div>
                                     </div>
                                 </div>
@@ -842,7 +882,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>68 Lacs Onwards**</li>
                                         <li ><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
                                     </ul>
-                                    <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -858,7 +898,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>75 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Maan, Pune</a></li>
                                     </ul>
-                                    <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -874,7 +914,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>75 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi, Pune</a></li>
                                     </ul>
-                                    <a href="#home" class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -894,7 +934,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>84 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
                                     </ul>
-                                    <a class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -910,7 +950,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>78 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 1</a></li>
                                     </ul>
-                                    <a class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -926,7 +966,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>67 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi Mahalunge Link Road</a></li>
                                     </ul>
-                                    <a class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -946,7 +986,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>69 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi Mahalunge Link Road</a></li>
                                     </ul>
-                                    <a class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -962,7 +1002,7 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>67 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Hinjewadi phase 2</a></li>
                                     </ul>
-                                    <a class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
@@ -978,12 +1018,208 @@
                                         <li style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-inr" style="color: black;" ></i>85 Lacs Onwards**</li>
                                         <li><a class="heart" href="#" style="font-size: 16px; font-weight: bold; color: black;"><i class="fa fa-location-arrow"></i>Maan, Pune</a></li>
                                     </ul>
-                                    <a class="btn btn-primary">Download Brochure</a>
+                                    <button class="btn btn-primary" onclick="showPopups()">Download Brochure</button>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+                    <style>
+                        /* Add some basic styling for the popup */
+                        #popupf {
+                        display: none;
+                        position: fixed;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        padding: 20px;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                        z-index: 1000;
+                        width: 400px;
+                        text-align: center;
+                        border-radius: 10px;
+                        align-content: center;
+                        }
+
+                        #popupf h2 {
+                        margin: 0;
+                        padding-bottom: 10px;
+                        font-size: 22px;
+                        color: #333;
+                        }
+
+                        #popupf p {
+                        font-size: 16px;
+                        color: #666;
+                        }
+
+                        #popupf input,
+                        #popupf select {
+                        width: 100%;
+                        padding: 5px;
+                        
+            
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        color: #333;
+                        box-sizing: border-box;
+                        }
+                        #popupf textarea{
+                        width: 100%;
+                        padding: 5px;
+                        margin-bottom: 10px;
+            
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        color: #333;
+                        box-sizing: border-box;
+                        }
+
+                        #popupf button {
+                        
+                        padding: 9px 18px;
+                        background-color: #040300;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 10px;
+                        margin: 5px;
+                        }
+
+                        #popupf button:hover {
+                        background-color: #b3870f;
+                        }
+
+                        #overlays {
+                        display: none;
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        z-index: 500;
+                        align-content: center;
+                        }
+
+                        .cBtn {
+                        text-align: center;
+                        }
+
+                        .cBtn ul {
+                        padding: 0;
+                        list-style: none;
+                        }
+
+                        .cBtn ul li {
+                        display: inline-block;
+                        }
+
+                        .cBtn ul li button {
+                        font-size: 18px;
+                        margin-top: 10px;
+                        }
+
+                      </style>
+                      
+                      <div id="overlays">
+                      <div id="popupf">
+                        <form id="contactForm" onsubmit="submitForm(event)" method="post">
+                            <input type="text" id="name" class="col-md-12 col-xs-12 name" name="name" placeholder="Name *" required/>
+                            <input type="email" id="email" class="col-md-12 col-xs-12 Email" name="email" placeholder="Email *" required/>
+                            <input type="text" id="subject" class="col-md-12 col-xs-12 Subject" name="subject" placeholder="Subject *" required/>
+                            <input type="text" id="phonenumber" class="col-md-12 col-xs-12 Number" name="phonenumber" placeholder="Phone Number *" required/>
+                            <p class="col-md-14 col-xs-12 property"></p><br>
+                            <select id="property" class="col-md-14 col-xs-12 property" name="property">
+                                <option value="Property">Property</option>
+                                <option value="Lodha Panache">Lodha Panache</option>
+                                <option value="Farmville">Farmville</option>
+                                <option value="Gera Highlands">Gera Highlands</option>
+                                <option value="Central Park">Central Park</option>
+                                <option value="Atmos">Atmos</option>
+                                <option value="VTP">VTP</option>
+                                <option value="Westwind">Westwind</option>
+                                <option value="Pride">Pride</option>
+                                <option value="Rohan">Rohan</option>
+                            </select>
+                    
+                            <p class="col-md-14 col-xs-12 property"></p>
+                            <textarea id="message" class="col-md-12 col-xs-12 Message" name="message" placeholder="Message *" required rows="4"></textarea>
+                            <div class="cBtn">
+                                <div><br><br>
+                                        <button type="submit" class="downloadBrochure" style="font-size: 15px" class="btn-primary">
+                                            <i class="fa fa-share"></i> Download Brochure
+                                        </button> </div><div>
+                                        <button type="button" onclick="closePopups()">Close</button></div>
+                                    
+                            </div>
+                        </form>
+                      </div></div>
+                      
+                                    <!-- <script>
+                                        $(document).ready(function() {
+                                        $('#contactForm').on('submit', async function(event) {
+                                            event.preventDefault(); // Prevent default form submission
+
+                                            var formData = {
+                                            name: $('input[name="name"]').val(),
+                                            email: $('input[name="email"]').val(),
+                                            subject: $('input[name="subject"]').val(),
+                                            phonenumber: $('input[name="phonenumber"]').val(),
+                                            property: $('select[name="property"]').val(),
+                                            message: $('textarea[name="message"]').val()
+                                            };
+
+                                            try {
+                                            const response = await fetch('/submit', {
+                                                method: 'POST',
+                                                headers: {
+                                                'Content-Type': 'application/json'
+                                                },
+                                                body: JSON.stringify(formData)
+                                            });
+
+                                            if (response.ok) {
+                                                $('#contactForm')[0].reset(); // Clear the form on successful email send
+                                                alert('Form submitted successfully!');
+                                            } else {
+                                                console.error('Error submitting form.');
+                                                alert('There was an error submitting the form. Please try again.');
+                                            }
+                                            } catch (error) {
+                                            console.error('Error:', error);
+                                            alert('There was an error submitting the form. Please try again.');
+                                            }
+                                        });
+                                        });
+
+                                      </script> -->
+                                
+                            </div>
+                        </div>
+                            
+                    <script>
+                    //     document.getElementById('popupButton').addEventListener('click', function() {
+                    //     document.getElementById('overlays').style.display = 'block';
+                    //     document.getElementById('popupf').style.display = 'block';
+                    // });
+
+                    
+                        function showPopups() {
+                            document.getElementById('overlays').style.display = 'block';
+                            document.getElementById('popupf').style.display = 'block';
+                        }
+                    
+                        function closePopups() {
+                          document.getElementById('overlays').style.display = 'none';
+                          document.getElementById('popupf').style.display = 'none';
+                        }
+                      </script>
                     
                     
                     
