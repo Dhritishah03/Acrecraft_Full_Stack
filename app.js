@@ -44,7 +44,7 @@ app.post('/submit', (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'dhritishah03@gmail.com', // Replace with the recipient's email
+    to: 'yourfirstestate@gmail.com', // Replace with the recipient's email
     subject: subject || 'New Form Submission',
     text: `You have a new form submission from:
     
